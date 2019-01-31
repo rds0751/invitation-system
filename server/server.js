@@ -247,5 +247,5 @@ app.get('/logout',(req,res)=>{
   res.redirect('/');
 })
 app.listen(process.env.PORT, function() {
-  console.log("running at localhost: " + port);
+  console.log("running at localhost: ");
 });
