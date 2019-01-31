@@ -45,10 +45,11 @@ passport.deserializeUser((user, done) => done(null, user));
 passport.use(
   new FacebookStrategy(
     {
-      clientID: process.env.clientID,
+      
+      ID: process.env.clientID,
       clientSecret: process.env.clientSecret,
       callbackURL:
-        "https://invitation-system.herokuapp.com/auth/facebook/callback",
+        "https://ipaymatics.herokuapp.com/auth/facebook/callback",
       profileFields: ["id", "displayName", "photos", "email"],
       enableProof: true
     },
