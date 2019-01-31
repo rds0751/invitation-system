@@ -246,6 +246,7 @@ app.get('/logout',(req,res)=>{
   req.logout();
   res.redirect('/');
 })
-app.listen(process.env.PORT, function() {
-  console.log("running at localhost: ");
+var server = app.listen(process.env.PORT || 5000, function () {
+  var port = server.address().port;
+  console.log("Express is working on port " + port);
 });
